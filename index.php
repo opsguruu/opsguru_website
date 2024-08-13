@@ -12,7 +12,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>OPSGuruu</title>
+  <title>OpsGuruuu</title>
   <link rel="icon" type="image/x-icon" href="images\favicon.ico">
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -27,11 +27,11 @@
 <body>
   <div class="hero_area">
     <!-- header section strats -->
-    <header class="header_section">
+    <header class="header_section" style="overflow-x: clip;">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container">
-          <a class="navbar-brand" href="index.html">
-            <img src="images/png/logo-no-background.png" style="width: 22%;" alt="" />
+          <a class="navbar-brand" href="index.php">
+            <img src="images/png/logo-no-background.png" style="width: 18%;padding-top: 4%;" alt="" />
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -39,20 +39,20 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  ">
+              <li class="nav-item ">
+                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.php"> About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="work.php">Work </a>
+              </li>
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html"> About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="work.html">Work </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="category.html"> Category </a>
+                <a class="nav-link" href="category.php"> Category </a>
               </li>
             </ul>
-            <div class="user_option">
+            <!-- <div class="user_option">
               <a href="">
                 <span>
                   Login
@@ -61,7 +61,7 @@
               <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
               </form>
-            </div>
+            </div> -->
           </div>
           <div>
             <div class="custom_menu-btn ">
@@ -111,7 +111,7 @@
                       Python Development.
                     </h1>
                     <p>
-                      Empower your career with industry-relevant skills at OpsGuru.
+                      Empower your career with industry-relevant skills at OpsGuruu.
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn-1">
@@ -220,10 +220,10 @@
               </h2>
             </div>
             <p>
-              At OpsGuru, we are dedicated to providing top-notch training in the most in-demand areas of technology. Our offerings include comprehensive courses in DevOps, AWS Cloud, and Fullstack Python Development, designed to equip you with the skills needed to thrive in today’s competitive tech landscape.
+              At OpsGuruu, we are dedicated to providing top-notch training in the most in-demand areas of technology. Our offerings include comprehensive courses in DevOps, AWS Cloud, and Fullstack Python Development, designed to equip you with the skills needed to thrive in today’s competitive tech landscape.
             </p>
             <p>
-              Founded by industry veterans, OpsGuru is more than just a training institute; it’s a hub of innovation where students and professionals alike come to learn, grow, and excel. We believe in a hands-on approach to learning, ensuring that our students can apply what they learn in real-world scenarios.            </p>
+              Founded by industry veterans, OpsGuruu is more than just a training institute; it’s a hub of innovation where students and professionals alike come to learn, grow, and excel. We believe in a hands-on approach to learning, ensuring that our students can apply what they learn in real-world scenarios.            </p>
             <div class="btn-box">
               <!-- <a href="" class="btn-1">
                 Join Us
@@ -375,7 +375,7 @@
     </div>
     <div class="detail-box">
       <h2>
-        Why Choose OpsGuru?
+        Why Choose OpsGuruu?
       </h2>
       <p>
         Learn from seasoned professionals with deep industry experience, engage in hands-on exercises across DevOps, Cloud, and Development, gain expertise in today’s most sought-after skills, and join a supportive community of learners and experts. 
@@ -665,16 +665,16 @@
                 </h5>
                 <ul>
                   <li class=" active">
-                    <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="" href="index.php">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="">
-                    <a class="" href="about.html">About </a>
+                    <a class="" href="about.php">About </a>
                   </li>
                   <li class="">
-                    <a class="" href="work.html">Work </a>
+                    <a class="" href="work.php">Work </a>
                   </li>
                   <li class="">
-                    <a class="" href="category.html">Category </a>
+                    <a class="" href="category.php">Category </a>
                   </li>
                 </ul>
               </div>
@@ -684,7 +684,7 @@
                 Offices
               </h5>
               <p>
-                Explore OpsGuru’s global network of offices, providing local support and accessibility to help you achieve your tech goals.
+                Explore OpsGuruu’s global network of offices, providing local support and accessibility to help you achieve your tech goals.
               </p>
             </div>
 
@@ -693,7 +693,7 @@
                 Information
               </h5>
               <p>
-                Explore OpsGuru’s offerings with detailed course info, schedules, and support to guide your educational journey. </p>
+                Explore OpsGuruu’s offerings with detailed course info, schedules, and support to guide your educational journey. </p>
             </div>
 
             <div class="col-md-3  offset-lg-1">
@@ -734,7 +734,7 @@
                     </div>
                     <div class="detail-box">
                       <h6>
-                        OPSGuruu@gmail.com
+                        OpsGuruuu@gmail.com
                       </h6>
                     </div>
                   </a>
