@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Insert form data into the database
-    $sql = "INSERT INTO banner (t1, t2, t3, content, buttons, images, status) VALUES ('$t1', '$t2', '$t3', '$content', '$buttons', '$photo', '$status ')";
+    $sql = "INSERT INTO banner (t1, t2, t3, content, buttons, images, statuss) VALUES ('$t1', '$t2', '$t3', '$content', '$buttons', '$photo', '$status ')";
 
     if ($conn->query($sql) === TRUE) {
         echo "<div class='alert alert-success'>New banner created successfully.</div>";

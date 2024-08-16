@@ -25,7 +25,7 @@ if ($result->num_rows > 0) {
         }
         $button_names_string = implode(", ", $button_names);
 
-        echo "<tr><td>".$row["id"]."</td><td>".$row["status"]."</td><td>".$row["t1"]."</td><td>".$row["t2"]."</td><td>".$row["t3"]."</td><td>".$row["content"]."</td><td>".$button_names_string."</td><td>
+        echo "<tr><td>".$row["id"]."</td><td>".$row["statuss"]."</td><td>".$row["t1"]."</td><td>".$row["t2"]."</td><td>".$row["t3"]."</td><td>".$row["content"]."</td><td>".$button_names_string."</td><td>
         <img src=uploads/".$row["images"]." alt='Banner Image' style='max-width: 100px;'>
         </td>
         <td><a href='update.php?id=".$row["id"]."' class='btn btn-primary'>Edit</a> 
