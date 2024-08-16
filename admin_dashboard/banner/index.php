@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_FILES['photo']) && $_FILES['photo']['error'] == UPLOAD_ERR_OK) {
         $photo = $_FILES['photo']['name'];
         $temp_name = $_FILES['photo']['tmp_name'];
-        $folder = "uploads/";
+        $folder = "/usr/share/nginx/html/uploads/";
 
         // Validate file type
         $allowed_types = ['image/jpeg', 'image/png', 'image/gif'];
