@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     <div class="mb-3">
         <label for="photo" class="form-label">Images</label>
-        <input type="file" class="form-control" id="photo" name="photo" accept="image/*">
+        <input type="file" class="form-control" id="photo" name="photo" accept="uploads/*">
     </div>
     <div class="mb-3">
         <label for="status" class="form-label">Status</label>
