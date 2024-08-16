@@ -6,7 +6,7 @@ $sql = "SELECT * FROM banner";
 $result = $conn->query($sql);
 
 echo "<h2>Banners</h2>";
-echo "<a href='create.php' class='btn btn-success mb-3'>Add New Banner</a>";
+echo "<a href='index.php' class='btn btn-success mb-3'>Add New Banner</a>";
 
 if ($result->num_rows > 0) {
     echo "<table class='table table-bordered'>";
