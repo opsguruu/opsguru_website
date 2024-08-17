@@ -137,9 +137,9 @@
                 <div class="col-md-5 offset-md-1">
                   <div class="detail-box">
                     <h1>
-                      Real-World Projects  <br>
-                      and Expert  <br>
-                      Mentorship
+                      Stop Listening  <br>
+                      to Words  <br>
+                      of a Slave
                     </h1>
                     <p>
                       Learn by doing with practical exercises and live projects.
@@ -168,12 +168,12 @@
                 <div class="col-md-5 offset-md-1">
                   <div class="detail-box">
                     <h1>
-                      Become a Part <br>
-                      of the Tech <br>
-                      Revolution
+                      Here we Train Tech<br>
+                      champion not the <br>
+                      Tech slaves
                     </h1>
                     <p>
-                      Network with like-minded professionals and grow together.
+                      Get the network with like-minded professionals and grow together.
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn-1">
