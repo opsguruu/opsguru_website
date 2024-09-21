@@ -1,0 +1,104 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pgpoolservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pgpoolservice
+  template:
+    metadata:
+      labels:
+        app: pgpoolservice
+    spec:
+      containers:
+      - name: pgpoolservice
+        image: pgpool/pgpool
+        env:
+        - name: POSTGRES_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: mypostgres-postgres-secret
+              key: username
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mypostgres-postgres-secret
+              key: password
+        - name: PGPOOL_PASSWORD_ENCRYPTION_METHOD
+          value: "scram-sha-256"
+        - name: PGPOOL_ENABLE_POOL_PASSWD
+          value: "true"
+        - name: PGPOOL_SKIP_PASSWORD_ENCRYPTION
+          value: "true"
+        volumeMounts:
+        - name: pgpool-config
+          mountPath: /config
+
+      volumes:
+      - name: pgpool-config
+        configMap:
+          name: pgpoolconfigfile
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pgpoolservice
+spec:
+  selector:
+    app: pgpoolservice
+  ports:
+  - name: pgpool-port
+    protocol: TCP
+    port: 9899
+    targetPort: 9899
+  type: NodePort
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pgpoolconfigfile
+  labels:
+    name: pgpoolconfigfile
+data:
+  pgpool.conf: |-
+    listen_addresses = '*'
+    port = 9899
+    socket_dir = '/var/run/pgpool'
+    pcp_listen_addresses = '*'
+    pcp_port = 9898
+    pcp_socket_dir = '/var/run/pgpool'
+    backend_hostname0 = 'my-timescaledb'
+    backend_port0 = 5432
+    backend_weight0 = 1
+    backend_flag0 = 'ALWAYS_PRIMARY|DISALLOW_TO_FAILOVER'
+    backend_hostname1 = 'my-timescaledb-replica'
+    backend_port1 = 5432
+    backend_weight1 = 2
+    backend_flag1 = 'DISALLOW_TO_FAILOVER'
+    sr_check_period = 0
+    health_check_period = 0
+    backend_clustering_mode = 'streaming_replication'
+    num_init_children = 32
+    max_pool = 4
+    child_life_time = 300
+    child_max_connections = 0
+    connection_life_time = 0
+    client_idle_limit = 0
+    connection_cache = on
+    load_balance_mode = on
+    ssl = on
+    enable_pool_hba = on
+    failover_on_backend_error = off
+    log_min_messages = warning
+    master_slave_mode = on
+		master_slave_sub_mode = 'stream'
+  pool_hba.conf: |-
+    local      all         all                          trust
+    hostssl    all         all         0.0.0.0/0        scram-sha-256
+    host       all         all         0.0.0.0/0        trust
+    host       all         all         0.0.0.0/0        scram-sha-256
+    host       all         all         0.0.0.0/0        md5

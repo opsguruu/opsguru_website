@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Data Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+<h1>CSV File Data</h1>
+
+<?php
+// File path of the CSV
+$csvFile = 'applications.csv';
+
+// Check if the file exists and is readable
+if (file_exists($csvFile) && is_readable($csvFile)) {
+    // Open the file for reading
+    if (($handle = fopen($csvFile, 'r')) !== FALSE) {
+        echo "<table>";
+        
+        // Read the first row for headers
+        if (($header = fgetcsv($handle)) !== FALSE) {
+            echo "<thead><tr>";
+            foreach ($header as $heading) {
+                echo "<th>" . htmlspecialchars($heading) . "</th>";
+            }
+            echo "</tr></thead>";
+        }
+
+        echo "<tbody>";
+        // Read the remaining rows and display them
+        while (($row = fgetcsv($handle)) !== FALSE) {
+            echo "<tr>";
+            foreach ($row as $data) {
+                echo "<td>" . htmlspecialchars($data) . "</td>";
+            }
+            echo "</tr>";
+        }
+        echo "</tbody>";
+
+        echo "</table>";
+        // Close the file handle
+        fclose($handle);
+    } else {
+        echo "<p>Error: Unable to open the file.</p>";
+    }
+} else {
+    echo "<p>No data available to display. The CSV file may not exist or is not readable.</p>";
+}
+?>
+
+</body>
+</html>
