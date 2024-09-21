@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>OPSGuru Academy</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-scholar.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <h4 style="color: #1cbbb4;">OPSGuru</h4>
+                        <h6 style="color: #1cbbb4;">Academy</h6>
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Serach Start ***** -->
+                    <div class="search-input" style="padding: 0 20px;">
+                      <form id="search" action="#">
+                        <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
+                        <i class="fa fa-search"></i>
+                      </form>
+                    </div>
+                    <!-- ***** Serach Start ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                      <li class="scroll-to-section"><a href="#services">Services</a></li>
+                      <li class="scroll-to-section"><a href="#courses">Courses</a></li>
+                      <li class="scroll-to-section"><a href="#team">Team</a></li>
+                      <li class="scroll-to-section"><a href="#events">Events</a></li>
+                      <li class="scroll-to-section"><a href="#contact">Register Now!</a></li>
+                  </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- Main Banner Start -->
+  <div class="main-banner" id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-carousel owl-banner">
+            <div class="item item-1">
+              <div class="header-text">
+                <h2>With OpsGuru, Your Learning Journey is Streamlined</h2>
+                <p>OpsGuru is a premier training institute offering expert-led courses in DevOps, Cloud, and Fullstack Python Development. Our curriculum is designed to provide practical, hands-on experience, making complex concepts easier to grasp.</p>
+                <div class="buttons">
+                  <div class="main-button">
+                    <a href="#">Request Demo</a>
+                  </div>
+                  <div class="icon-button">
+                    <a href="#"><i class="fa fa-play"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add more carousel items if needed -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Main Banner End -->
+
+  <!-- Application Form Start -->
+  <section id="application-form" class="my-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-heading text-center mb-4">
+            <h2>Apply for the <span>DevOps Accelerator: Mastering Agile Automation</span> Course</h2>
+            <p>Please fill out the form below to apply for the course.</p>
+          </div>
+          <form action="process_form.php" method="post">
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address:</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="your.email@example.com" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="full_name" class="form-label">Full Name:</label>
+              <input type="text" class="form-control" id="full_name" name="full_name" placeholder="John Doe" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="phone_number" class="form-label">Phone Number:</label>
+              <input type="tel" class="form-control" id="phone_number" name="phone_number" placeholder="+1 234 567 890" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="dob" class="form-label">Date of Birth:</label>
+              <input type="date" class="form-control" id="dob" name="dob" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="education" class="form-label">Highest Level of Education:</label>
+              <select class="form-select" id="education" name="education" required>
+                <option selected disabled>Choose your education level</option>
+                <option value="High School Diploma">High School Diploma</option>
+                <option value="Associate Degree">Associate Degree</option>
+                <option value="Bachelor's Degree">Bachelor's Degree</option>
+                <option value="Master's Degree">Master's Degree</option>
+                <option value="Doctorate">Doctorate</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="field_of_study" class="form-label">Field of Study:</label>
+              <input type="text" class="form-control" id="field_of_study" name="field_of_study" placeholder="Computer Science" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="institution_name" class="form-label">Institution Name:</label>
+              <input type="text" class="form-control" id="institution_name" name="institution_name" placeholder="ABC University" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="job_title" class="form-label">Current Job Title:</label>
+              <input type="text" class="form-control" id="job_title" name="job_title" placeholder="Software Engineer" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="company_name" class="form-label">Company Name:</label>
+              <input type="text" class="form-control" id="company_name" name="company_name" placeholder="XYZ Corp" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="experience_years" class="form-label">Years of Experience in IT/Software Development:</label>
+              <input type="number" class="form-control" id="experience_years" name="experience_years" min="0" placeholder="5" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="experience_description" class="form-label">Briefly Describe Your Professional Experience:</label>
+              <textarea class="form-control" id="experience_description" name="experience_description" rows="4" placeholder="Describe your experience here..." required></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="interest_reason" class="form-label">Why are you interested in the "DevOps Accelerator: Mastering Agile Automation" course?</label>
+              <textarea class="form-control" id="interest_reason" name="interest_reason" rows="4" placeholder="Share your motivation..." required></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="devops_experience" class="form-label">Do you have any prior experience with DevOps tools or practices? If yes, please specify:</label>
+              <textarea class="form-control" id="devops_experience" name="devops_experience" rows="4" placeholder="E.g., Experience with Docker, Jenkins, Kubernetes..."></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="goals" class="form-label">What are your goals for this course?</label>
+              <textarea class="form-control" id="goals" name="goals" rows="4" placeholder="Outline your goals..." required></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="referral_source" class="form-label">How did you hear about OpsGuru Academy?</label>
+              <select class="form-select" id="referral_source" name="referral_source" required>
+                <option selected disabled>Select an option</option>
+                <option value="Search Engine">Search Engine</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Friend or Colleague">Friend or Colleague</option>
+                <option value="Advertisement">Advertisement</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Submit Application</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Application Form End -->
+
+
+    <!-- Pieces 9 -->
+    <div class="contact-us section" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6  align-self-center">
+            <div class="section-heading">
+              <h6>Contact Us</h6>
+              <h2>Feel free to contact us anytime</h2>
+              <p>Thank you for choosing our templates. We provide you best CSS templates at absolutely 100% free of charge. You may support us by sharing our website to your friends.</p>
+              <div class="special-offer">
+                <span class="offer">off<br><em>50%</em></span>
+                <h6>Valide: <em>24 SEP 2024</em></h6>
+                <h4>Special Offer <em>50%</em> OFF!</h4>
+                <a href="base.html"><i class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="contact-us-content">
+              <form id="contact-form" action="" method="post">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="orange-button">Send Message Now</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- Footer Start -->
+  <!-- <footer class="py-4 bg-dark text-white">
+    <div class="container text-center">
+      <p class="mb-0" style="font-size: 1px;">Copyright © 2036 Scholar Organization. All rights reserved.
+        &nbsp;|&nbsp; Design: <a href="https://templatemo.com" rel="nofollow" target="_blank">TemplateMo</a>
+        &nbsp;|&nbsp; Distribution: <a href="https://themewagon.com" rel="nofollow" target="_blank">ThemeWagon</a>
+      </p>
+    </div>
+  </footer> -->
+  <!-- Footer End -->
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Additional Scripts -->
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+</html>
